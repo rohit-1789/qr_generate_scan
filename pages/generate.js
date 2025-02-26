@@ -4,20 +4,51 @@ import QRCode from 'qrcode';
 export default function Generate() {
   const [text, setText] = useState('');
   const [qrCodeUrl, setQrCodeUrl] = useState('');
+  const [saveStatus, setSaveStatus] = useState(null);
 
   const generateQRCode = async () => {
-    if (!text.trim()) return; // Prevent empty input
+    if (!text.trim()) return;
     try {
       const url = await QRCode.toDataURL(text);
       setQrCodeUrl(url);
+      setSaveStatus(null);
     } catch (error) {
       console.error('Error generating QR Code:', error);
     }
   };
 
+  const saveQRCode = async () => {
+    if (!qrCodeUrl) return;
+
+    const response = await fetch('/api/save-generated-qr', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text, qrCodeUrl }),
+    });
+
+    const data = await response.json();
+
+    if (response.status === 409) {
+      setSaveStatus('already-saved');
+    } else if (response.ok) {
+      setSaveStatus('saved');
+    }
+  };
+
+  const downloadQRCode = () => {
+    if (!qrCodeUrl) return;
+
+    const link = document.createElement('a');
+    link.href = qrCodeUrl;
+    link.download = `QR-${text || 'Code'}.png`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-6">
-      <h1 className="text-4xl font-bold mb-6 animate-fade-in">QR Code Generator</h1>
+      <h1 className="text-4xl font-bold mb-6">QR Code Generator</h1>
       <input
         type="text"
         value={text}
@@ -32,8 +63,28 @@ export default function Generate() {
         Generate QR Code
       </button>
       {qrCodeUrl && (
-        <div className="mt-6 p-4 bg-white rounded-lg shadow-lg animate-zoom-in">
+        <div className="mt-6 p-4 bg-white rounded-lg shadow-lg animate-zoom-in flex flex-col items-center">
           <img src={qrCodeUrl} alt="QR Code" className="border p-2 bg-gray-200 rounded-lg" />
+          <div className="flex mt-4 space-x-4">
+            {saveStatus === 'already-saved' ? (
+              <p className="text-yellow-400">QR Code already saved!</p>
+            ) : saveStatus === 'saved' ? (
+              <p className="text-green-400">QR Code saved successfully!</p>
+            ) : (
+              <button
+                onClick={saveQRCode}
+                className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded"
+              >
+                Save QR Code
+              </button>
+            )}
+            <button
+              onClick={downloadQRCode}
+              className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded"
+            >
+              Download QR Code
+            </button>
+          </div>
         </div>
       )}
     </div>

@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light Mode */
 body {
-  @apply bg-cover bg-center bg-no-repeat;
-  background-image: url('/background.jpg'); /* Image should be inside public folder */
+  background-image: url('/background.jpg'); /* ✅ Ensures correct path */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark Mode */
+.dark body {
+  background-image: url('/background.jpg'); /* ✅ Same background for dark mode */
 }

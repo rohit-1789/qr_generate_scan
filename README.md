@@ -26,7 +26,7 @@ npm install qrcode
 npm install html5-qrcode
 
 
-## 🚀 Getting Started
+## 🚀 **Getting Started**
 1️⃣ Clone the Repository
 bash
 Copy

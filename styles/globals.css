@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-cover bg-center bg-no-repeat;
+  background-image: url('/background.jpg'); /* Image should be inside public folder */
+}

@@ -19,7 +19,7 @@ This is a **full-stack QR Code Generator & Scanner** application built with **Ne
 ## 📦 **Installed Dependencies**
 These are all the dependencies installed in the project:
 
-```bash
+
 npm install next react react-dom
 npm install -D tailwindcss postcss autoprefixer
 npm install qrcode

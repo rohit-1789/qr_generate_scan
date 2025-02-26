@@ -2,10 +2,6 @@
 
 This is a **full-stack QR Code Generator & Scanner** application built with **Next.js, Tailwind CSS, and MongoDB**. The app allows users to generate and scan QR codes in real time.
 
-## 📸 Demo
-🔗 [Live Demo](YOUR_DEPLOYMENT_URL_HERE) (Add your Vercel/Netlify link after deployment)
-
----
 
 ## 🛠️ **Tech Stack**
 - **Frontend:** Next.js, React, Tailwind CSS

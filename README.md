@@ -27,36 +27,31 @@ npm install html5-qrcode
 
 
 ## 🚀 **Getting Started**
+```bash
 1️⃣ Clone the Repository
-bash
-Copy
-Edit
+
 git clone https://github.com/YOUR_GITHUB_USERNAME/qr-code-app.git
 cd qr-code-app
 2️⃣ Install Dependencies
-bash
-Copy
-Edit
+
 npm install
 3️⃣ Start the Development Server
-bash
-Copy
-Edit
+
 npm run dev
 Your app will be available at http://localhost:3000
 
-🎨 Project Features
+```
+
+## 🎨 Project Features
 ✅ QR Code Generator – Convert text/URLs into a QR code.
 ✅ QR Code Scanner – Scan QR codes using your device's camera.
 ✅ Responsive UI – Styled with Tailwind CSS for a professional look.
 ✅ Real-time Scanning – Uses html5-qrcode for smooth scanning.
 ✅ Fast & Lightweight – Optimized for performance with Next.js.
 
-📂 Project Structure
+## 📂 Project Structure
+
 ```bash
-php
-Copy
-Edit
 qr-code-app/
 ├── public/                     # Static assets (favicon, background image)
 ├── src/                         # Source code directory

@@ -53,6 +53,7 @@ Your app will be available at http://localhost:3000
 ✅ Fast & Lightweight – Optimized for performance with Next.js.
 
 📂 Project Structure
+```bash
 php
 Copy
 Edit
@@ -73,6 +74,8 @@ qr-code-app/
 ├── postcss.config.js             # PostCSS configuration
 ├── README.md                     # Project documentation
 ├── package.json                  # Dependencies and scripts
+```
+
 🌍 Deployment
 🚀 Deploy on Vercel
 The easiest way to deploy a Next.js app is with Vercel:

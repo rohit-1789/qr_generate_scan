@@ -17,6 +17,7 @@ This is a **full-stack QR Code Generator & Scanner** application built with **Ne
 ---
 
 ## 📦 **Installed Dependencies**
+``` bash
 These are all the dependencies installed in the project:
 
 
@@ -24,7 +25,7 @@ npm install next react react-dom
 npm install -D tailwindcss postcss autoprefixer
 npm install qrcode
 npm install html5-qrcode
-
+```
 
 ## 🚀 **Getting Started**
 ```bash
@@ -43,12 +44,13 @@ Your app will be available at http://localhost:3000
 ```
 
 ## 🎨 Project Features
+```bash
 ✅ QR Code Generator – Convert text/URLs into a QR code.
 ✅ QR Code Scanner – Scan QR codes using your device's camera.
 ✅ Responsive UI – Styled with Tailwind CSS for a professional look.
 ✅ Real-time Scanning – Uses html5-qrcode for smooth scanning.
 ✅ Fast & Lightweight – Optimized for performance with Next.js.
-
+```
 ## 📂 Project Structure
 
 ```bash
@@ -71,51 +73,12 @@ qr-code-app/
 ├── package.json                  # Dependencies and scripts
 ```
 
-🌍 Deployment
-🚀 Deploy on Vercel
-The easiest way to deploy a Next.js app is with Vercel:
 
-bash
-Copy
-Edit
-npm install -g vercel
-vercel
-Then follow the on-screen instructions to deploy.
-
-🎯 Deploy on Netlify
-Go to Netlify and connect your GitHub repository.
-Set the build command:
-arduino
-Copy
-Edit
-npm run build
-Set the publish directory:
-lua
-Copy
-Edit
-.next
-Click Deploy 🚀
-🎯 Future Enhancements
-✅ Dark Mode Toggle
-✅ Download QR Code as Image
-✅ Store Scan History in MongoDB
-✅ Allow Uploading QR Code Images for Decoding
-✅ Multi-language Support
-👨‍💻 Contributing
-Want to improve this project? Feel free to fork and send a PR! 💡
-
-Fork the repo
-Create a new branch: git checkout -b feature-new
-Commit changes: git commit -m "Added new feature"
-Push: git push origin feature-new
-Open a Pull Request
-⚖️ License
+## ⚖️ License
+```bash
 This project is open-source and available under the MIT License.
 
 ⭐ Show Your Support
 If you liked this project, give it a ⭐ on GitHub!
-Happy Coding! 🚀🔥
+```
 
-yaml
-Copy
-Edit

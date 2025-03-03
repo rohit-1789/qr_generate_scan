@@ -27,7 +27,7 @@ npm install html5-qrcode
 ```bash
 1️⃣ Clone the Repository
 
-git clone https://github.com/YOUR_GITHUB_USERNAME/qr-code-app.git
+git clone https://github.com/rohit-1789/qr_generate_scan.git
 cd qr-code-app
 2️⃣ Install Dependencies
 

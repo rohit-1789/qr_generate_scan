@@ -40,7 +40,7 @@ Your app will be available at http://localhost:3000
 ```
 ## Setting Up MongoDB
 ```bash
-1️⃣ Create a Database named "qrCodeDB"
+1️⃣ Create a Database named "qrCodeDB" on local server
 2️⃣ Create a collection named "generated_qr"
 3️⃣ Create another collection named "scans"
 

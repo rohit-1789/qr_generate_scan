@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white text-gray-900 dark:bg-gray-900 dark:text-white px-4 transition-all">
       <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">Welcome to QR Code App</h1>
-      <p className="text-xl text-gray-300 mb-8 animate-slide-in">
+      <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 animate-slide-in">
         Generate and Scan QR Codes Instantly!
       </p>
       <div className="flex space-x-6">
@@ -19,8 +19,6 @@ export default function Home() {
           </button>
         </Link>
       </div>
-      
     </div>
-    
   );
 }

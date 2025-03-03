@@ -3,24 +3,21 @@ import { createContext, useState, useEffect } from "react";
 export const DarkModeContext = createContext();
 
 export const DarkModeProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() =>
+    typeof window !== "undefined" &&
+    document.documentElement.classList.contains("dark")
+  );
 
   useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    if (darkMode) {
       document.documentElement.classList.add("dark");
-      setDarkMode(true);
+    } else {
+      document.documentElement.classList.remove("dark");
     }
-  }, []);
+  }, [darkMode]); // ✅ Effect runs whenever darkMode state changes
 
   const toggleDarkMode = () => {
-    setDarkMode((prevMode) => {
-      if (!prevMode) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-      return !prevMode;
-    });
+    setDarkMode((prevMode) => !prevMode); // ✅ Toggle the state
   };
 
   return (

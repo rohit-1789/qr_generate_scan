@@ -47,24 +47,24 @@ export default function Generate() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white p-6 transition-all">
       <h1 className="text-4xl font-bold mb-6">QR Code Generator</h1>
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Enter text or URL"
-        className="border border-gray-300 rounded p-3 mb-4 w-full max-w-md bg-gray-800 text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+        className="border border-gray-300 rounded p-3 mb-4 w-full max-w-md bg-gray-200 dark:bg-gray-800 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
       />
       <button
         onClick={generateQRCode}
         className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded-lg shadow-md transition-all transform hover:scale-105"
       >
         Generate QR Code
-      </button>
+      </button> 
       {qrCodeUrl && (
-        <div className="mt-6 p-4 bg-white rounded-lg shadow-lg animate-zoom-in flex flex-col items-center">
-          <img src={qrCodeUrl} alt="QR Code" className="border p-2 bg-gray-200 rounded-lg" />
+        <div className="mt-6 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg animate-zoom-in flex flex-col items-center">
+          <img src={qrCodeUrl} alt="QR Code" className="border p-2 bg-gray-200 dark:bg-gray-700 rounded-lg" />
           <div className="flex mt-4 space-x-4">
             {saveStatus === 'already-saved' ? (
               <p className="text-yellow-400">QR Code already saved!</p>

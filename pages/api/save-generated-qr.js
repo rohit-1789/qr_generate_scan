@@ -4,7 +4,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       const client = await clientPromise;
-      const db = client.db('qr-code-app');
+      const db = client.db('qrCodeDB');
       const collection = db.collection('generated_qr');
 
       const { text, qrCodeUrl } = req.body;

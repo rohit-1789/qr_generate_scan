@@ -38,6 +38,13 @@ npm run dev
 Your app will be available at http://localhost:3000
 
 ```
+## Setting Up MongoDB
+```bash
+1️⃣ Create a Database named "qrCodeDB"
+2️⃣ Create a collection named "generated_qr"
+3️⃣ Create another collection named "scans"
+
+```
 
 ## 🎨 Project Features
 ```bash
